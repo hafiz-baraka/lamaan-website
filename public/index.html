@@ -819,7 +819,7 @@ if(form){
 }
 
 
-/* photos: load images/<slot>.jpg if present */
+/* photos: load photos/<slot>.jpg if present */
 var slots=$$("[data-slot]");
 function placeImg(el,src){
   var img=el.querySelector("img.ph");
@@ -833,7 +833,7 @@ slots.forEach(function(el){
   var probe=new Image();
   probe.onload=function(){placeImg(el,probe.src);galleryCheck();};
   probe.onerror=function(){};
-  probe.src="images/"+el.dataset.slot+".jpg";
+  probe.src="photos/"+el.dataset.slot+".jpg";
 });
 
 /* photo editor: add #edit to the address */
@@ -897,7 +897,7 @@ $("#edDl").addEventListener("click",function(){
   var keys=Object.keys(edited), msg=$("#edMsg");
   if(!keys.length){msg.textContent=tr("ed_none");return;}
   msg.textContent=tr("ed_busy");
-  Promise.all(keys.map(function(k){return edited[k].arrayBuffer().then(function(b){return {name:"images/"+k+".jpg",data:new Uint8Array(b)};});})).then(function(files){
+  Promise.all(keys.map(function(k){return edited[k].arrayBuffer().then(function(b){return {name:"photos/"+k+".jpg",data:new Uint8Array(b)};});})).then(function(files){
     try{var a=document.createElement("a");a.href=URL.createObjectURL(makeZip(files));a.download="lamaan-photos.zip";document.body.appendChild(a);a.click();a.remove();msg.textContent=tr("ed_done");}
     catch(e){msg.textContent=tr("ed_fail");}
   });
