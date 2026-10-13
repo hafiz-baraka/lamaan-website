@@ -690,10 +690,12 @@ body.editing .social-float{bottom:calc(158px + env(safe-area-inset-bottom,0px))}
           </div>
           <div class="field"><label for="f-phone" data-i18n="f_phone">Mobile number</label><input id="f-phone" type="tel" autocomplete="tel" dir="ltr" placeholder="05X XXX XXXX"></div>
           <div class="field"><label for="f-notes" data-i18n="f_notes">Notes</label><textarea id="f-notes" data-i18n-ph="f_notes_ph" placeholder="Access details, parking, anything we should know"></textarea></div>
+          <input type="checkbox" id="f-hp" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0">
           <p class="err" id="err" hidden></p>
-          <div class="nav-btns"><button class="btn btn-line back" type="button" data-i18n="back">Back</button><button class="btn btn-brand" type="submit" data-i18n="f_submit">Prepare WhatsApp booking</button></div>
+          <div class="nav-btns"><button class="btn btn-line back" type="button" data-i18n="back">Back</button><button class="btn btn-brand" type="submit" data-i18n="f_submit">Send booking request</button></div>
           <div class="ready" id="ready" hidden>
-            <strong data-i18n="ready_h">Your booking is ready. Tap below to send it.</strong>
+            <strong id="readyH" data-i18n="ready_h">Thank you! Your booking request has been sent. We will contact you shortly to confirm.</strong>
+            <p class="sub" id="readyAlt" data-i18n="ready_alt" style="margin:0">Want a faster reply? You can also send it to us on WhatsApp.</p>
             <pre id="readyText"></pre>
             <a class="btn btn-wa" id="readyLink" href="https://wa.me/971501419941" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg><span data-i18n="ready_btn">Send on WhatsApp</span></a>
           </div>
@@ -826,7 +828,7 @@ f_biz:"اسم المنشأة",f_name:"الشخص المسؤول",f_phone:"رقم
 o_rest:"مطعم",o_caf:"كافتيريا",o_shaw:"شاورما أو مشاوي",o_hotel:"مطبخ فندق أو تموين",o_other:"أخرى",
 f_hoods:"عدد الشفاطات",f_svc:"الخدمة المطلوبة",o_full:"نظام الشفط بالكامل (شفاط، مجاري، مروحة)",o_hood:"إزالة الدهون من الشفاط والفلاتر",o_deep:"التنظيف العميق للمطبخ",o_contract:"عقد صيانة",
 f_plan:"باقة العقد",o_none:"زيارة واحدة",f_notes:"ملاحظات",f_notes_ph:"اليوم أو الوقت المفضل، تفاصيل الدخول، أي معلومات أخرى",
-f_submit:"تجهيز رسالة واتساب",ready_h:"رسالتك جاهزة. اضغط أدناه لإرسالها.",ready_btn:"أرسل عبر واتساب",
+f_submit:"إرسال طلب الحجز",ready_h:"شكراً لك! تم إرسال طلب الحجز وسنتواصل معك قريباً للتأكيد.",ready_alt:"تريد رداً أسرع؟ يمكنك أيضاً إرساله لنا عبر واتساب.",ready_btn:"أرسل عبر واتساب",
 ci_h:"بيانات التواصل",ci_phone:"الهاتف وواتساب",ci_email:"البريد الإلكتروني",ci_loc:"الموقع",ci_loc_v:"أبوظبي، الإمارات العربية المتحدة",ci_lic:"الرخصة التجارية",copy:"نسخ",copied:"تم النسخ",
 ft_name:"لمعان الخليج لخدمات التنظيف ذ.م.م – ش.ش.و"
 },{
@@ -849,7 +851,7 @@ st_a:"الخدمة",st_b:"الموعد",st_c:"البيانات",st_of:"الخط�
 f_city:"المدينة",city_ad:"أبوظبي",city_ain:"العين",city_oth:"أخرى (سنؤكد معك)",f_area:"المنطقة / الحي",
 f_date:"التاريخ المفضل",f_time:"الوقت المفضل",tm_night:"بعد الإغلاق (ليلاً)",tm_morning:"صباحاً",tm_afternoon:"بعد الظهر",
 f_hint:"يجب إطفاء خط الطهي وتبريده قبل أن يبدأ فريقنا.",next:"متابعة",back:"رجوع",
-f_submit:"تجهيز الحجز عبر واتساب",ready_h:"حجزك جاهز. اضغط أدناه لإرساله.",prefer_wa:"تفضّل واتساب؟ راسلنا مباشرة",
+f_submit:"إرسال طلب الحجز",ready_h:"شكراً لك! تم إرسال طلب الحجز وسنتواصل معك قريباً للتأكيد.",ready_alt:"تريد رداً أسرع؟ يمكنك أيضاً إرساله لنا عبر واتساب.",prefer_wa:"تفضّل واتساب؟ راسلنا مباشرة",
 f_notes_ph:"تفاصيل الدخول، المواقف، أي معلومات أخرى",
 w_k:"لماذا تختارنا المطابخ",w_h:"في كل مهمة",faq_h:"أسئلة الحجز الشائعة",
 q6:"كيف أحجز خدمة تنظيف المطبخ؟",a6:"اختر خدمة من الأعلى، واملأ خطوات نموذج الحجز الثلاث وأرسله عبر واتساب. ويمكنك أيضاً مراسلتنا أو الاتصال بنا مباشرة.",
@@ -909,12 +911,17 @@ e4:"نترك المكان نظيفاً وجافاً وجاهزاً للاستخ�
 var MSG={
 en:{hello:"Hello Lamaan Al-Khaleej, I would like to book a service.",svc:"Service",plan:"Plan",type:"Property type",hoods:"Number of hoods",city:"City",area:"Area",date:"Preferred date",time:"Preferred time",biz:"Business",name:"Contact",phone:"Mobile",notes:"Notes",
  quick:"Hello Lamaan Al-Khaleej, I would like a quote for a cleaning service.",ask:"Hello Lamaan Al-Khaleej, I would like a quote for: ",
- need3:"Please add your business name, contact person and mobile number."},
+ need3:"Please add your business name, contact person and mobile number.",
+ sending:"Sending…",fail_h:"We could not send your request automatically. Please tap below to send it on WhatsApp."},
 ar:{hello:"مرحباً لمعان الخليج، أرغب في حجز خدمة.",svc:"الخدمة",plan:"الباقة",type:"نوع المنشأة",hoods:"عدد الشفاطات",city:"المدينة",area:"المنطقة",date:"التاريخ المفضل",time:"الوقت المفضل",biz:"المنشأة",name:"الشخص المسؤول",phone:"الجوال",notes:"ملاحظات",
  quick:"مرحباً لمعان الخليج، أرغب في الحصول على عرض سعر لخدمة تنظيف.",ask:"مرحباً لمعان الخليج، أرغب في الحصول على عرض سعر لخدمة: ",
- need3:"يرجى إدخال اسم المنشأة والشخص المسؤول ورقم الجوال."}
+ need3:"يرجى إدخال اسم المنشأة والشخص المسؤول ورقم الجوال.",
+ sending:"جارٍ الإرسال…",fail_h:"تعذّر إرسال طلبك تلقائياً. يرجى الضغط أدناه لإرساله عبر واتساب."}
 };
 var WA="https://wa.me/971501419941?text=";
+/* Booking notifications: email via Web3Forms (paste your access key below), WhatsApp via the Worker (/api/book) */
+var W3F_KEY="PASTE-WEB3FORMS-KEY-HERE";
+var BOOK_EMAIL_SUBJECT="New booking request – lamaanalkhaleej.com";
 var lang="en";
 var $=function(s){return document.querySelector(s);}, $$=function(s){return [].slice.call(document.querySelectorAll(s));};
 var nodes=$$("[data-i18n]"); nodes.forEach(function(el){el.dataset.en=el.textContent;});
@@ -996,6 +1003,14 @@ function build(){
   lines.push(m.time+": "+selText("f-time"),"",m.biz+": "+val("f-biz"),m.name+": "+val("f-name"),m.phone+": "+val("f-phone"));
   if(val("f-notes"))lines.push(m.notes+": "+val("f-notes"));
   var txt=lines.join("\n"); $("#readyText").textContent=txt; $("#readyLink").href=WA+encodeURIComponent(txt);
+  return txt;
+}
+function sendBooking(txt){
+  function ok(r){return r.ok;} function no(){return false;}
+  var wa=fetch("/api/book",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({text:txt})}).then(ok,no);
+  var mail=(W3F_KEY.indexOf("PASTE")===0)?Promise.resolve(false):fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},
+    body:JSON.stringify({access_key:W3F_KEY,subject:BOOK_EMAIL_SUBJECT,from_name:"Lamaan website – "+val("f-biz"),name:val("f-name"),phone:val("f-phone"),message:txt})}).then(ok,no);
+  return Promise.all([wa,mail]).then(function(r){return r[0]||r[1];});
 }
 if(form){
   $("#f-svc").addEventListener("change",togglePlan); togglePlan();
@@ -1005,7 +1020,15 @@ if(form){
   form.addEventListener("submit",function(e){
     e.preventDefault(); var err=$("#err");
     if(!val("f-biz")||!val("f-name")||!val("f-phone")){err.textContent=MSG[lang].need3;err.hidden=false;return;}
-    err.hidden=true; build(); $("#ready").hidden=false; $("#readyLink").focus();
+    err.hidden=true; var txt=build();
+    if($("#f-hp").checked)return;
+    var btn=form.querySelector('button[type="submit"]'); if(btn.disabled)return;
+    var btnTxt=btn.textContent; btn.disabled=true; btn.textContent=MSG[lang].sending;
+    sendBooking(txt).then(function(ok){
+      btn.disabled=false; btn.textContent=btnTxt;
+      $("#readyH").textContent=ok?tr("ready_h"):MSG[lang].fail_h; $("#readyAlt").hidden=!ok;
+      $("#ready").hidden=false; $("#readyLink").focus();
+    });
   });
   $$("[data-book]").forEach(function(b){b.addEventListener("click",function(){
     choose(b.dataset.book); $("#book").scrollIntoView({behavior:"smooth"});
