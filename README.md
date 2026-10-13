@@ -7,7 +7,7 @@ Website for lamaanalkhaleej.com. Every change committed to the `main` branch is 
 - `public/` – everything in this folder is the live website
   - `public/index.html` – home page
   - `public/services.html` – services page
-  - `public/images/` – photos used by the site
+  - `public/photos` – photos used by the site
 - `wrangler.jsonc` – Cloudflare settings (no need to change)
 
 ## Adding or replacing images
