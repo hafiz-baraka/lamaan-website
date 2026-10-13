@@ -12,7 +12,7 @@ Website for lamaanalkhaleej.com. Every change committed to the `main` branch is 
 
 ## Adding or replacing images
 
-1. Open the `public/images` folder on GitHub (create it with **Add file → Upload files** if it doesn't exist yet).
+1. Open the `public/photos` folder on GitHub.
 2. Click **Add file → Upload files** and drag in your photos.
-3. Use the exact names the site expects: hood.jpg, full.jpg, duct.jpg, fan.jpg, deep.jpg, contract.jpg, work1.jpg … work8.jpg.
+3. Use the exact names the site expects: hood.jpg, full.jpg, duct.jpg, fan.jpg, stove.jpg, deep.jpg, office.jpg, villa.jpg, carpet.jpg, sofa.jpg, window.jpg, postcon.jpg, care.jpg, tank.jpg, sink.jpg, sewer.jpg, contract.jpg, work1.jpg … work8.jpg. Uploading a photo with the same name replaces the old one.
 4. Click **Commit changes**. The site updates within a minute or two.
