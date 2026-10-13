@@ -1,1 +1,1 @@
-{"$schema":"node_modules/wrangler/config-schema.json","name":"throbbing-pond-b970","compatibility_date":"2026-10-01","assets":{"directory":"./public"}}
+{"$schema":"node_modules/wrangler/config-schema.json","name":"throbbing-pond-b970","main":"src/index.js","compatibility_date":"2026-10-01","assets":{"directory":"./public","binding":"ASSETS"},"vars":{"OWNER_PHONE":"+971501419941"}}
